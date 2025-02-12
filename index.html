@@ -11,7 +11,6 @@
             color: #051747;
             margin: 0;
             padding: 0;
-            text-align: center;
         }
         .container {
             width: 80%;
@@ -19,57 +18,95 @@
             padding: 20px;
         }
         .header {
-            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            width: 100%;
         }
         .header img {
-            width: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
+            margin-right: 20px;
+        }
+        .header-content {
+            flex: 1;
+            text-align: left;
         }
         h1 {
             font-size: 32px;
             color: #051747;
+            margin: 0;
         }
         .bio {
             font-size: 18px;
-            margin-top: 10px;
             color: #535F80;
+            margin-top: 5px;
         }
-        .projects, .skills, .socials {
+        .projects {
             margin-top: 40px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .projects h2, .skills h2, .socials h2 {
             color: #081F62;
+            width: 100%;
+            text-align: center;
         }
         .project-card {
             background-color: #E7E9F0;
             padding: 20px;
             border-radius: 8px;
             margin: 10px;
-            display: inline-block;
             width: 300px;
+            height: 250px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .skills {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
+        }
+        .skills {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         .skills span {
-            display: block;
-            margin: 5px 0;
+            display: inline-block;
+            margin: 10px;
             font-size: 24px;
-            position: relative;
-            cursor: pointer;
             color: #051747;
             transition: color 0.3s;
+            position: relative;
         }
         .skills span:hover {
             color: #FF5733;
         }
+        .skills span:hover::after {
+            content: attr(data-info);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -50px;
+            background-color: #051747;
+            color: white;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: pre-line;
+        }
+        .socials {
+            margin-top: 40px;
+            text-align: center;
+        }
         .socials a {
             display: inline-flex;
             align-items: center;
-            margin: 5px;
+            margin: 10px;
             font-size: 24px;
             text-decoration: none;
             color: #081F62;
@@ -82,19 +119,16 @@
             width: 30px;
             margin-right: 8px;
         }
-        .footer {
-            margin-top: 50px;
-            font-size: 12px;
-            color: #535F80;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <img src="profile.jpg" alt="Profile Picture">
-            <h1>Jason Echevarria's Professional Portfolio</h1>
-            <p class="bio">Forensic Data Analyst | Data Scientist | Risk Modeler | Machine Learning Enthusiast</p>
+            <img src="rusty-sj.jpeg" alt="Profile Picture">
+            <div class="header-content">
+                <h1>Jason Echevarria's Professional Portfolio</h1>
+                <p class="bio">Forensic Data Analyst | Data Scientist | Risk Modeler | Machine Learning Enthusiast</p>
+            </div>
         </div>
         <div class="projects">
             <h2>Current Projects</h2>
@@ -108,13 +142,25 @@
                 <p>Mathematical modeling of opinion convergence and fragmentation using Python.</p>
                 <a href="https://github.com/jechev4/bounded-confidence" target="_blank">View on GitHub</a>
             </div>
+            <div class="project-card">
+                <h3>IBM Data Science Capstone</h3>
+                <p>Final project for IBM's certification, implementing ML models for real-world applications.</p>
+                <a href="https://github.com/jechev4/IBM-Data-Science-Project-JE2024" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Forensic Analytics Tools</h3>
+                <p>Custom-built forensic data analysis tools for anomaly detection and fraud detection.</p>
+                <a href="https://github.com/jechev4/forensic-tools" target="_blank">View on GitHub</a>
+            </div>
         </div>
         <div class="skills">
             <h2>Skills</h2>
-            <span data-info="Pandas, NumPy, Scikit-learn, Matplotlib">Python</span>
-            <span data-info="Joins, Stored Procedures, Indexing, Optimization">SQL</span>
-            <span data-info="Dashboards, DAX, Data Visualization">Power BI</span>
-            <span data-info="Clustering, Logistic Regression, KNN, Neural Networks">Machine Learning</span>
+            <div class="skills-container">
+                <span data-info="Pandas\nNumPy\nScikit-learn\nMatplotlib">Python</span>
+                <span data-info="Joins\nStored Procedures\nIndexing\nOptimization">SQL</span>
+                <span data-info="Dashboards\nDAX\nData Visualization">Power BI</span>
+                <span data-info="Clustering\nLogistic Regression\nKNN\nNeural Networks">Machine Learning</span>
+            </div>
         </div>
         <div class="socials">
             <h2>Socials</h2>
