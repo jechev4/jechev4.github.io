@@ -19,41 +19,44 @@
         }
         .header {
             display: flex;
-            align-items: center;
+            flex-direction: column; /* Stack image and title on small screens */
+            align-items: center; /* Center everything */
+            justify-content: center;
             width: 100%;
+            text-align: center;
+            margin-bottom: 20px; /* Add spacing */
         }
+        
         .header img {
-            width: 200px;
-            height: 200px;
+            width: 220px; /* Increase image size */
+            height: 220px;
             border-radius: 50%;
-            margin-right: 20px;
+            margin-bottom: 15px; /* Space between image and text */
         }
+        
         .header-content {
-            flex: 1;
-            text-align: left;
+            text-align: center; /* Ensure text is centered */
         }
+        
         h1 {
-            font-size: 32px;
+            font-size: 32px; /* Adjust font size for balance */
             color: #051747;
             margin: 0;
         }
+        
         .bio {
             font-size: 18px;
             color: #535F80;
             margin-top: 5px;
-        }
-        .projects {
-            margin-top: 40px;
             text-align: center;
+        }
+        
+        .projects {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .projects h2, .skills h2, .socials h2 {
-            color: #081F62;
-            width: 100%;
-            text-align: center;
-        }
+        
         .project-card {
             background-color: #E7E9F0;
             padding: 20px;
@@ -65,6 +68,31 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+        
+        /* Responsive Layout for Larger Screens */
+        @media (min-width: 768px) {
+            .header {
+                flex-direction: row; /* Align image and text side-by-side */
+                justify-content: flex-start;
+                align-items: center;
+            }
+        
+            .header img {
+                width: 250px; /* Increase size further for larger screens */
+                height: 250px;
+                margin-right: 20px; /* Space between image and text */
+            }
+        
+            .header-content {
+                text-align: left; /* Align text to the left */
+            }
+        
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
         .skills {
             margin-top: 40px;
@@ -86,18 +114,23 @@
         .skills span:hover {
             color: #FF5733;
         }
-        .skills span:hover::after {
+          .skills span:hover::after {
             content: attr(data-info);
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            bottom: -50px;
+            bottom: -60px;
             background-color: #051747;
             color: white;
             font-size: 14px;
             padding: 5px 10px;
             border-radius: 5px;
-            white-space: pre-line;
+            white-space: nowrap;
+            text-align: center;
+            display: block;
+            min-width: 120px;
+            max-width: 250px;
+            white-space: pre-line; /* Enables line breaks */
         }
         .socials {
             margin-top: 40px;
@@ -171,10 +204,10 @@
         <div class="skills">
             <h2>Skills</h2>
             <div class="skills-container">
-                <span data-info="Pandas\nNumPy\nScikit-learn\nMatplotlib">Python</span>
-                <span data-info="Joins\nStored Procedures\nIndexing\nOptimization">SQL</span>
-                <span data-info="Dashboards\nDAX\nData Visualization">Power BI</span>
-                <span data-info="Clustering\nLogistic Regression\nKNN\nNeural Networks">Machine Learning</span>
+                <span data-info="Pandas<br>NumPy<br>Scikit-learn<br>Matplotlib">Python</span>
+                <span data-info="Joins<br>Stored Procedures<br>Indexing<br>Optimization">SQL</span>
+                <span data-info="Dashboards<br>DAX<br>Data Visualization">Power BI</span>
+                <span data-info="Clustering<br>Logistic Regression<br>KNN<br>Neural Networks">Machine Learning</span>
             </div>
         </div>
         <div class="socials">
