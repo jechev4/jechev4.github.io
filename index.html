@@ -17,46 +17,43 @@
             margin: auto;
             padding: 20px;
         }
-        .header {
+ .header {
             display: flex;
-            flex-direction: column; /* Stack image and title on small screens */
-            align-items: center; /* Center everything */
-            justify-content: center;
+            align-items: center;
             width: 100%;
-            text-align: center;
-            margin-bottom: 20px; /* Add spacing */
         }
-        
         .header img {
-            width: 220px; /* Increase image size */
-            height: 220px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            margin-bottom: 15px; /* Space between image and text */
+            margin-right: 20px;
         }
-        
         .header-content {
-            text-align: center; /* Ensure text is centered */
+            flex: 1;
+            text-align: left;
         }
-        
         h1 {
-            font-size: 32px; /* Adjust font size for balance */
+            font-size: 32px;
             color: #051747;
             margin: 0;
         }
-        
         .bio {
             font-size: 18px;
             color: #535F80;
             margin-top: 5px;
-            text-align: center;
         }
-        
         .projects {
+            margin-top: 40px;
+            text-align: center;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-        
+        .projects h2, .skills h2, .socials h2 {
+            color: #081F62;
+            width: 100%;
+            text-align: center;
+        }
         .project-card {
             background-color: #E7E9F0;
             padding: 20px;
@@ -68,31 +65,6 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-        }
-        
-        /* Responsive Layout for Larger Screens */
-        @media (min-width: 768px) {
-            .header {
-                flex-direction: row; /* Align image and text side-by-side */
-                justify-content: flex-start;
-                align-items: center;
-            }
-        
-            .header img {
-                width: 250px; /* Increase size further for larger screens */
-                height: 250px;
-                margin-right: 20px; /* Space between image and text */
-            }
-        
-            .header-content {
-                text-align: left; /* Align text to the left */
-            }
-        
-            .container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
         }
         .skills {
             margin-top: 40px;
