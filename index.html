@@ -7,8 +7,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #FEFEFE;
+            color: #051747;
             margin: 0;
             padding: 0;
             text-align: center;
@@ -22,24 +22,26 @@
             margin-top: 30px;
         }
         .header img {
-            width: 100px;
+            width: 150px;
             border-radius: 50%;
         }
         h1 {
             font-size: 32px;
+            color: #051747;
         }
         .bio {
             font-size: 18px;
             margin-top: 10px;
+            color: #535F80;
         }
         .projects, .skills, .socials {
             margin-top: 40px;
         }
         .projects h2, .skills h2, .socials h2 {
-            color: #0056b3;
+            color: #081F62;
         }
         .project-card {
-            background-color: #ffffff;
+            background-color: #E7E9F0;
             padding: 20px;
             border-radius: 8px;
             margin: 10px;
@@ -47,30 +49,22 @@
             width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        .skills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .skills span {
-            display: inline-block;
-            margin: 5px;
+            display: block;
+            margin: 5px 0;
             font-size: 24px;
             position: relative;
             cursor: pointer;
-            color: #0056b3;
+            color: #051747;
             transition: color 0.3s;
         }
         .skills span:hover {
-            color: #ff5733;
-        }
-        .skills span:hover::after {
-            content: attr(data-info);
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -30px;
-            background-color: #0056b3;
-            color: white;
-            font-size: 14px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            white-space: nowrap;
+            color: #FF5733;
         }
         .socials a {
             display: inline-flex;
@@ -78,11 +72,11 @@
             margin: 5px;
             font-size: 24px;
             text-decoration: none;
-            color: #0056b3;
+            color: #081F62;
             transition: color 0.3s;
         }
         .socials a:hover {
-            color: #ff5733;
+            color: #FF5733;
         }
         .socials img {
             width: 30px;
@@ -91,14 +85,14 @@
         .footer {
             margin-top: 50px;
             font-size: 12px;
-            color: #666;
+            color: #535F80;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://via.placeholder.com/100" alt="Profile Picture">
+            <img src="profile.jpg" alt="Profile Picture">
             <h1>Jason Echevarria's Professional Portfolio</h1>
             <p class="bio">Forensic Data Analyst | Data Scientist | Risk Modeler | Machine Learning Enthusiast</p>
         </div>
@@ -113,16 +107,6 @@
                 <h3>Bounded Confidence Opinion Simulation</h3>
                 <p>Mathematical modeling of opinion convergence and fragmentation using Python.</p>
                 <a href="https://github.com/jechev4/bounded-confidence" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-card">
-                <h3>IBM Data Science Capstone</h3>
-                <p>Final project for IBM's certification, implementing ML models for real-world applications.</p>
-                <a href="https://github.com/jechev4/IBM-Data-Science-Project-JE2024" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-card">
-                <h3>Forensic Analytics Tools</h3>
-                <p>Custom-built forensic data analysis tools for anomaly detection and fraud detection.</p>
-                <a href="https://github.com/jechev4/forensic-tools" target="_blank">View on GitHub</a>
             </div>
         </div>
         <div class="skills">
